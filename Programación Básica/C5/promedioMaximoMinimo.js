@@ -2,7 +2,7 @@ let read=require('readline-sync');
 let valor=read.questionInt("Ingrese valor: ");
 let maximo=valor, minimo=valor, cantidadValores=0, suma=0;
 
-while (valor!==0){
+while (valor!=0){
     if (maximo<valor){
         maximo=valor;
     }
