@@ -11,7 +11,21 @@ function esMultiplo (dividendo, divisor){
         return false;
 }
 
+function valorAbsoluto (entero) {
+    let absoluto=0;
+    if (entero<0) {
+        for (entero; entero <=-1; entero++) {
+            absoluto++;
+        }
+    return absoluto;
+    }
+    else {
+        return entero; 
+    }
+}
+
 function cantidadDeDivisores (entero) {
+    
     let cantidad=0;
     for (let i=0;i<=entero; i++){
         if (esMultiplo (entero, i)==true){
@@ -21,4 +35,4 @@ function cantidadDeDivisores (entero) {
     return cantidad;
 }
 
-console.log ("La cantidad de divisores del numero "+entero+", es: "+cantidadDeDivisores (entero));
+console.log ("La cantidad de divisores del numero "+entero+", es: "+cantidadDeDivisores (valorAbsoluto(entero)));
