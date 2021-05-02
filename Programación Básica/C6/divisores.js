@@ -17,7 +17,7 @@ function valorAbsoluto (entero) {
         for (entero; entero <=-1; entero++) {
             absoluto++;
         }
-    return absoluto;
+        return absoluto;
     }
     else {
         return entero; 
@@ -27,12 +27,12 @@ function valorAbsoluto (entero) {
 function cantidadDeDivisores (entero) {
     
     let cantidad=0;
-    for (let i=0;i<=entero; i++){
-        if (esMultiplo (entero, i)==true){
+    for (let i=1;i<=entero; i++){
+        if (esMultiplo (entero, i)==true){ // no es necesario consultar el true
             cantidad++;
         }
     }
     return cantidad;
 }
 
-console.log ("La cantidad de divisores del numero "+entero+", es: "+cantidadDeDivisores (valorAbsoluto(entero)));
+console.log ("La cantidad de divisores del numero "+entero+", es: "+cantidadDeDivisores (valorAbsoluto(entero)));       
