@@ -1,0 +1,97 @@
+body {
+    background-color:rgb(230, 244, 255);
+}
+
+@font-face {
+    font-family: "Letters for Learners";
+    src: url("c:\windows\fonts\letters for learners.tff");
+}
+
+#navegador {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#navegador ul {
+    list-style-type: none;
+}
+
+#navegador li {
+    display:inline;
+    margin: 0 10px 0 0 ;
+    font-family: "Letters for Learners";
+    font-size:2rem;
+}
+
+#navegador li a {
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(229, 219, 255);
+    border-bottom:5px solid rgb(134, 134, 134);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+#navegador li a:hover{
+    background-color: rgb(218, 216, 219);
+    color: white;
+}
+
+#logo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    font-weight: bolder;
+}
+
+.portada {
+    display: flex;
+    text-align: center;
+    height: 350px;
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contenedor {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: auto;
+    background-color: rgb(246, 218, 255);
+    border: rgb(233, 255, 215) solid 2px;
+}
+
+.subContenedor {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    font-family: "Letters for Learners";
+    font-size: 2rem;
+}
+
+.img {
+    max-width: 100%;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+/* .menu1 {
+    display: inline;
+    background-color:rgb(211, 211, 211);
+    border:4px solid grey;
+    padding: 1rem;
+    text-decoration: none;
+}
+ */

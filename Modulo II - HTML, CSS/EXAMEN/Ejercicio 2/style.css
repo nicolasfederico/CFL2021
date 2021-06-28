@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    background-color: hotpink;
+}
+
+.lista {
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#btn-add {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 187, 47);
+}
+
+#btn-clear {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(187, 0, 0);
+}

@@ -1,16 +1,17 @@
+
 let cantidadDeButacas=10 ;
 let butacasCine=new Array (cantidadDeButacas);
 let contadorDesocupadas=0;
 
 function getRandom(){
-    let random=Math.random();
-    if (random > 0.5) {
+    let random=Math.round(Math.random());
+    /*if (random > 0.5) {
         random=true;
     }
     else {
         random=false;
-    }
-    return random;
+    }*/
+    return random
 }
 
 function cargarArreglo (butacasCine) {
@@ -22,7 +23,7 @@ function cargarArreglo (butacasCine) {
 cargarArreglo (butacasCine);
 
 for (let i=0;i<cantidadDeButacas;i++){
-    if (butacasCine[i]==false) {
+    if (butacasCine[i]==0) {
         contadorDesocupadas++;
     }
 }

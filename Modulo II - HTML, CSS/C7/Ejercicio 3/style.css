@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div-aleatorio {
+    background-color: royalblue;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.contedor {
+    margin-left: auto;
+    margin-right: auto;
+}

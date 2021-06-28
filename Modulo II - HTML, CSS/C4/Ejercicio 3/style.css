@@ -1,0 +1,24 @@
+.formularioprincipal {
+    display: flex;
+    width: 50%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.boton {
+    display: flex
+}
+
+.advertencia {
+    color: red;
+}
+
+.confirmacion {
+    color: green;
+}

@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+
+.div-aleatorio {
+    background-color: royalblue;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}

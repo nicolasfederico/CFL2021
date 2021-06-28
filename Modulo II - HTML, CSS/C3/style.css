@@ -1,0 +1,14 @@
+.background {
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.first {
+    background-color: rebeccapurple;
+    color: white;
+    text-align: center;
+}
+
+div [class |="col"] {
+    border: 1px solid #00aeff
+}
