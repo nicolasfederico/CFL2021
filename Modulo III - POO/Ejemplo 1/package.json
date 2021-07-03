@@ -1,0 +1,15 @@
+{
+  "name": "ejemplo-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ejemplo1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "asciichart": "^1.5.25",
+    "readline-sync": "^1.4.10"
+  }
+}

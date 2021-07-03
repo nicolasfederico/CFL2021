@@ -1,0 +1,14 @@
+{
+  "name": "clf2021",
+  "version": "1.0.0",
+  "description": "Este es un repositorio donde se hará un control de versiones sobre los ejercicios del Curso FullStack dictado por el\r CFL 403.\r El objetivo de este repositorio es poder hacer un seguimiento de mis resoluciones de cada uno de los mismos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
