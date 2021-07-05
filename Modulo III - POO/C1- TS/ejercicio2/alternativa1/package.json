@@ -1,16 +1,17 @@
 {
-  "name": "ejemplo-1",
+  "name": "alternativa1",
   "version": "1.0.0",
   "description": "",
-  "main": "ejemplo1.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "graphSin" : "cls && node ejemplo1.js"
+    "textoArtistico" : "cls && node alternativa1.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "asciichart": "^1.5.25",
+    "ascii-art": "^2.8.0",
     "readline-sync": "^1.4.10"
   }
 }
