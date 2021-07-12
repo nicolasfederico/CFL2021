@@ -1,0 +1,3 @@
+ABC123;Ford;Fiesta;2012
+DEF456;Renault;Duster;2015
+ASD456;Fiat;Duna;2023
