@@ -25,7 +25,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var RLS = __importStar(require("readline-sync"));
 var gestorLibro_1 = __importDefault(require("./gestorLibro"));
 var gestor = new gestorLibro_1.default();
-gestor.cargarLibros();
+gestor.cargarLibros('libro.txt', '\n');
 gestor.mostrarLibros();
 //menu de opciones CRUD
 var opcion = RLS.question('Ingrese una opcion, X para finalizar: ').toUpperCase();

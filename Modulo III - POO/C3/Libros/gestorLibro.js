@@ -23,21 +23,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var RLS = __importStar(require("readline-sync"));
-var FS = __importStar(require("fs"));
 var Libro_1 = __importDefault(require("./Libro"));
+var LectorArchivos_1 = __importDefault(require("./LectorArchivos"));
 var GestorLibro = /** @class */ (function () {
     function GestorLibro() {
         this.libros = [];
+        this.archivo = new LectorArchivos_1.default();
     }
     GestorLibro.prototype.addLibro = function () {
-        var titulo = RLS.question('Ingrese el titulo: ');
-        var editorial = RLS.question('Ingrese la editorial: ');
-        var anioEdicion = RLS.question('Ingrese el año: ');
-        var genero = RLS.question('Ingrese el genero: ');
-        var idioma = RLS.question('Ingrese el idioma: ');
-        var autor = RLS.question('Ingrese el autor: ');
-        var precio = RLS.questionInt('Ingrese el precio: ');
-        this.libros.push(new Libro_1.default(titulo, editorial, anioEdicion, genero, idioma, autor, precio));
+        this.libros.push(this.pedirDatos());
     };
     GestorLibro.prototype.findLibro = function (titulo) {
         for (var i = 0; i < this.libros.length; i++) {
@@ -54,16 +48,9 @@ var GestorLibro = /** @class */ (function () {
         }
     };
     GestorLibro.prototype.updateLibro = function (libroViejo) {
-        var titulo = RLS.question('Ingrese el titulo: ');
-        var editorial = RLS.question('Ingrese la editorial: ');
-        var anioEdicion = RLS.question('Ingrese el año: ');
-        var genero = RLS.question('Ingrese el genero: ');
-        var idioma = RLS.question('Ingrese el idioma: ');
-        var autor = RLS.question('Ingrese el autor: ');
-        var precio = RLS.questionInt('Ingrese el precio: ');
         var posicion = this.findLibro(libroViejo);
         if (posicion != -1) {
-            this.libros[posicion] = new Libro_1.default(titulo, editorial, anioEdicion, genero, idioma, autor, precio);
+            this.libros[posicion] = this.pedirDatos();
         }
         else {
             console.log("el libro no existe");
@@ -72,14 +59,25 @@ var GestorLibro = /** @class */ (function () {
     GestorLibro.prototype.mostrarLibros = function () {
         console.log(this.libros);
     };
-    GestorLibro.prototype.cargarLibros = function () {
+    GestorLibro.prototype.cargarLibros = function (rutaArchivo, separador) {
         var _this = this;
-        var libros = (FS.readFileSync('libro.txt', 'utf8')).split('\n');
+        var libros = this.archivo.LeerArchivo(rutaArchivo, separador);
         var propiedadesLibro = [];
         libros.forEach(function (libroString) {
             propiedadesLibro = libroString.split(";");
             _this.libros.push(new Libro_1.default(propiedadesLibro[0], propiedadesLibro[1], propiedadesLibro[2], propiedadesLibro[3], propiedadesLibro[4], propiedadesLibro[5], parseInt(propiedadesLibro[6])));
         });
+    };
+    GestorLibro.prototype.pedirDatos = function () {
+        var titulo = RLS.question('Ingrese el titulo: ');
+        var editorial = RLS.question('Ingrese la editorial: ');
+        var anioEdicion = RLS.question('Ingrese el año: ');
+        var genero = RLS.question('Ingrese el genero: ');
+        var idioma = RLS.question('Ingrese el idioma: ');
+        var autor = RLS.question('Ingrese el autor: ');
+        var precio = RLS.questionInt('Ingrese el precio: ');
+        var libro = new Libro_1.default(titulo, editorial, anioEdicion, genero, idioma, autor, precio);
+        return libro;
     };
     return GestorLibro;
 }());
