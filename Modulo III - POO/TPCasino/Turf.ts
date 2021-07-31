@@ -9,7 +9,7 @@ export default class Turf {
     public constructor (){
         this.nombreCarrera = nombreRandom().spaced;
         this.carrera= [];
-        this.cantidadDeCaballos = 2;
+        this.cantidadDeCaballos = 10;
     }
 
     public armarCarrera ():void{

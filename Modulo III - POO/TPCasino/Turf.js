@@ -9,7 +9,7 @@ var Turf = /** @class */ (function () {
     function Turf() {
         this.nombreCarrera = project_name_generator_1.default().spaced;
         this.carrera = [];
-        this.cantidadDeCaballos = 2;
+        this.cantidadDeCaballos = 10;
     }
     Turf.prototype.armarCarrera = function () {
         for (var i = 0; i < this.cantidadDeCaballos; i++) {

@@ -49,7 +49,7 @@ export default class gestorTurf {
 
     }
 
-    public iniciarTurf (){
+    public iniciarTurf ():void{
         this.iniciarCarrera();
         this.iniciarApuestas();
         let ganador = this.elegirGanador ();
