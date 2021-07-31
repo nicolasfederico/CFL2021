@@ -1,22 +1,22 @@
 import numeroAleatorio from "./JugadaAleatoria";
 
-let numero:numeroAleatorio = new numeroAleatorio();
-
 export default class Ruleta {
 
     private color: string;
     private numeroGanador: number;
     private esPar: boolean;
+    private numero: numeroAleatorio;
 
     public constructor () {
         this.color = "verde"
         this.numeroGanador = 0;
         this.esPar = false;
+        this.numero = new numeroAleatorio();
     }
 
 
     public tirarRuleta():void {
-        this.numeroGanador = numero.numeroRandom(0,37);
+        this.numeroGanador = this.numero.numeroRandom(0,37);
         if (this.numeroGanador!=0) {
             if ((this.numeroGanador % 2)==0) {
                 this.color="negro"

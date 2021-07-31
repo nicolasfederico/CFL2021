@@ -1,21 +1,21 @@
 import Jugada from "./JugadaAleatoria"
 
-let jugada: Jugada = new Jugada ();
-
 export default class Tragamoneda {
     protected pozo: number;
     protected cantRodillos: number;
     protected apuesta: number;
+    protected jugada: Jugada;
 
     public constructor (pozoTotal:number, cantRodillos:number,apuesta:number){
         this.pozo = pozoTotal;
         this.cantRodillos= cantRodillos;
         this.apuesta = apuesta;
+        this.jugada = new Jugada ();
     }
 
     public jugar ():boolean{
         let estado:boolean = false;
-        let jugadaMaquina:number[] = jugada.generarJugada(this.cantRodillos,0,1);
+        let jugadaMaquina:number[] = this.jugada.generarJugada(this.cantRodillos,0,1);
         console.log (jugadaMaquina);
         for (let i=0; i<this.cantRodillos; i++){
             if ((jugadaMaquina[0]==jugadaMaquina[(i)])){

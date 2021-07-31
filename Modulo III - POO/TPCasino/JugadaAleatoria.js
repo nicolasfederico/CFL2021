@@ -5,8 +5,6 @@ var JugadaAleatoria = /** @class */ (function () {
     }
     JugadaAleatoria.prototype.generarJugada = function (cantRodillos, menorValor, mayorValor) {
         var jugada = new Array(cantRodillos);
-        mayorValor = mayorValor;
-        menorValor = menorValor;
         for (var i = 0; i < cantRodillos; i++) {
             jugada[i] = Math.floor(Math.random() * ((mayorValor + 1) - menorValor)) + menorValor;
         }

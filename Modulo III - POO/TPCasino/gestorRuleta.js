@@ -51,6 +51,7 @@ var GestorRuleta = /** @class */ (function () {
                     }
                     else {
                         this.jugadaPerdedora("Color", montoApuesta);
+                        opcion = RLS.question("Si queres salir ingresa X: ");
                     }
                     break;
                 }
@@ -74,6 +75,7 @@ var GestorRuleta = /** @class */ (function () {
                     }
                     else {
                         this.jugadaPerdedora("Par/Impar", montoApuesta);
+                        opcion = RLS.question("Si queres salir ingresa X: ");
                     }
                 }
                 case "3": {
@@ -89,11 +91,7 @@ var GestorRuleta = /** @class */ (function () {
                     }
                     else {
                         this.jugadaPerdedora("Color", montoApuesta);
-                        /* console.log ("Perdiste :(")
-                        this.user.disminuirMontoAcumulado(montoApuesta);
-                        console.log ("Te quedan: $"+this.user.getMontoAcumulado())
-                        this.archivo.EscribirArchivo("./logRuleta.txt","RULETA: Perdio en Color")
-                        opcion = RLS.question ("Si queres salir ingresa X: "); */
+                        opcion = RLS.question("Si queres salir ingresa X: ");
                     }
                 }
                 default:
@@ -103,12 +101,10 @@ var GestorRuleta = /** @class */ (function () {
         }
     };
     GestorRuleta.prototype.jugadaPerdedora = function (textoArchivo, montoApuesta) {
-        var opcion;
         console.log("Perdiste :(");
         this.user.disminuirMontoAcumulado(montoApuesta);
         console.log("Te quedan: $" + this.user.getMontoAcumulado());
         this.archivo.EscribirArchivo("./logRuleta.txt", "RULETA: Perdio en " + textoArchivo);
-        return opcion = RLS.question("Si queres salir ingresa X: ");
     };
     return GestorRuleta;
 }());

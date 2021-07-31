@@ -6,8 +6,6 @@ export default class JugadaAleatoria {
 
     public generarJugada (cantRodillos: number, menorValor:number, mayorValor:number):number[]{
         let jugada = new Array (cantRodillos);
-        mayorValor = mayorValor;
-        menorValor = menorValor;
         for (let i=0; i<cantRodillos; i++) {
             jugada[i] = Math.floor(Math.random() * ((mayorValor+1) - menorValor) ) + menorValor;
         }

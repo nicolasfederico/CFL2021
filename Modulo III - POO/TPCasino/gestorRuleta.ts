@@ -39,6 +39,7 @@ export default class GestorRuleta {
 
                     } else {
                         this.jugadaPerdedora("Color", montoApuesta);
+                        opcion = RLS.question ("Si queres salir ingresa X: ");
                     }
                 break;
                 }
@@ -61,6 +62,7 @@ export default class GestorRuleta {
                         this.archivo.EscribirArchivo("./logRuleta.txt","RULETA: Ganó en Par/Impar")
                     } else {
                         this.jugadaPerdedora("Par/Impar", montoApuesta);
+                        opcion = RLS.question ("Si queres salir ingresa X: ");
                     }
                 }
                 case "3": {
@@ -75,12 +77,8 @@ export default class GestorRuleta {
                         this.archivo.EscribirArchivo("./logRuleta.txt","RULETA: Ganó en Color")
                     } else {
                         this.jugadaPerdedora("Color", montoApuesta);
+                        opcion = RLS.question ("Si queres salir ingresa X: ");
                         
-                        /* console.log ("Perdiste :(")
-                        this.user.disminuirMontoAcumulado(montoApuesta);
-                        console.log ("Te quedan: $"+this.user.getMontoAcumulado())
-                        this.archivo.EscribirArchivo("./logRuleta.txt","RULETA: Perdio en Color")
-                        opcion = RLS.question ("Si queres salir ingresa X: "); */
                     }
                 }
                 default:
@@ -90,12 +88,10 @@ export default class GestorRuleta {
         }
     }
 
-    jugadaPerdedora(textoArchivo:string, montoApuesta:number):string {
-        let opcion:string;
+    jugadaPerdedora(textoArchivo:string, montoApuesta:number):void {
         console.log ("Perdiste :(")
         this.user.disminuirMontoAcumulado(montoApuesta);
         console.log ("Te quedan: $"+this.user.getMontoAcumulado())
         this.archivo.EscribirArchivo("./logRuleta.txt",`RULETA: Perdio en ${textoArchivo}`)
-        return opcion = RLS.question ("Si queres salir ingresa X: ");
     }
 } 
