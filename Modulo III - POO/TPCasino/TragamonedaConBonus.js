@@ -44,16 +44,16 @@ var TragamonedaConBonus = /** @class */ (function (_super) {
     __extends(TragamonedaConBonus, _super);
     function TragamonedaConBonus(pozoTotal, cantRodillos, apuesta) {
         var _this = _super.call(this, pozoTotal, cantRodillos, apuesta) || this;
-        _this.bonus = 1;
+        _this.bonus = [];
         return _this;
     }
     TragamonedaConBonus.prototype.aplicarBonus = function () {
         var opcion = RLS.question("Desea usar el BONUS? Ingrese Y, para hacer uso de este: ").toUpperCase();
         if (opcion == "Y") {
             var jugada = new JugadaAleatoria_1.default();
-            var daBonus = jugada.generarJugada(1, 1, 2);
+            this.bonus = jugada.generarJugada(1, 1, 2);
             console.log(">>>>>>>Jugando el Bonus!!<<<<<<<");
-            if (daBonus[0] == 1) {
+            if (this.bonus[0] == 1) {
                 console.log("FELICITACIONES, el premio ha sido duplicado!");
             }
             else {
