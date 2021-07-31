@@ -14,6 +14,17 @@ var JugadaAleatoria = /** @class */ (function () {
         var numero;
         return numero = Math.floor(Math.random() * ((mayorValor + 1) - menorValor)) + menorValor;
     };
+    JugadaAleatoria.prototype.numeroRandomConDecimales = function (menorValor, mayorValor) {
+        var numero;
+        return numero = parseFloat(((Math.random() * ((mayorValor + 1) - menorValor) + menorValor)).toFixed(2));
+    };
+    JugadaAleatoria.prototype.arregloRandomConDecimales = function (cant, menorValor, mayorValor) {
+        var arreglo = new Array(cant);
+        for (var i = 0; i < cant; i++) {
+            arreglo[i] = Math.random() * ((mayorValor + 1) - menorValor) + menorValor;
+        }
+        return arreglo;
+    };
     return JugadaAleatoria;
 }());
 exports.default = JugadaAleatoria;

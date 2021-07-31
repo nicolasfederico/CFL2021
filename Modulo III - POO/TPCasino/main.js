@@ -25,10 +25,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var RLS = __importStar(require("readline-sync"));
 var gestorRuleta_1 = __importDefault(require("./gestorRuleta"));
 var gestorTragamonedas_1 = __importDefault(require("./gestorTragamonedas"));
+var gestorTurf_1 = __importDefault(require("./gestorTurf"));
 console.log(">>>>>>>>>>>Bienvenido al Casino <<<<<<<<<<<< \n");
 var gestorTragamonedas = new gestorTragamonedas_1.default();
 var gestorRuleta = new gestorRuleta_1.default();
-console.log("A continuación elegí que juego querés jugar: \n 1 - Tragamonedas \n 2 - Ruleta \n 3 - Turf ");
+var gestorTurf = new gestorTurf_1.default();
+imprimirMenu();
 var opcion = RLS.question('Ingresa una opcion, X para finalizar: ').toUpperCase();
 while (opcion != 'X') {
     switch (opcion) {
@@ -40,6 +42,14 @@ while (opcion != 'X') {
             gestorRuleta.iniciarRuleta();
             break;
         }
+        case '3': {
+            gestorTurf.iniciarTurf();
+            break;
+        }
     }
+    imprimirMenu();
     opcion = RLS.question('Ingresa una opcion, X para finalizar: ').toUpperCase();
+}
+function imprimirMenu() {
+    console.log("A continuación elegí que juego querés jugar: \n 1 - Tragamonedas \n 2 - Ruleta \n 3 - Turf ");
 }
