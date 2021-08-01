@@ -88,7 +88,7 @@ export default class GestorRuleta {
         }
     }
 
-    jugadaPerdedora(textoArchivo:string, montoApuesta:number):void {
+    private jugadaPerdedora(textoArchivo:string, montoApuesta:number):void {
         console.log ("Perdiste :(")
         this.user.disminuirMontoAcumulado(montoApuesta);
         console.log ("Te quedan: $"+this.user.getMontoAcumulado())

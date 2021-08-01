@@ -29,52 +29,55 @@ export default class GestorTragamonedas {
         
         this.user.aumentarMontoAcumulado(RLS.questionInt ("Ingresá tu dinero a jugar: "))
 
-        
         switch (tipoTragamoneda) {
             case 1: {
-                let opcion = RLS.question ("----- Va a jugar al Tragamonedas Clasico ----- Ingrese Y, para continuar: ").toUpperCase();
-                let premio = false;
-                while (opcion  == "Y") {
-                    premio = this.tragamonedaClasico.jugar();
-                    if (premio) {
-                        console.log("HAS SIDO GANADOR DE UN POZO TOTAL DE: $", this.tragamonedaClasico.getPozo(),", FELICITACIONES!")
-                        this.filetxt.EscribirArchivo("./logTragamonedas.txt","CLASICO: Ganó")
-                        this.user.aumentarMontoAcumulado(this.tragamonedaClasico.getPozo())
-                        console.log ("Su monto total ahora es de: $ "+this.user.getMontoAcumulado())
-                        opcion = RLS.question ("deseas seguir apostando? Ingresa Y, para seguir jugando: ").toUpperCase();
-                        
-                    }
-                    else {
-                        
-                        this.filetxt.EscribirArchivo("./logTragamonedas.txt","CLASICO: Perdió")
-                        console.log(this.tragamonedaClasico.getApuesta());
-                        this.user.disminuirMontoAcumulado(this.tragamonedaClasico.getApuesta());
-                        console.log ("Su monto total ahora es de: $ "+ this.user.getMontoAcumulado())
-                        opcion = RLS.question ("No hay ganador :( , deseas seguir apostando? Ingresa Y, para seguir jugando: ").toUpperCase();
-                        
-                        
+                if (this.user.getMontoAcumulado()<this.tragamonedaClasico.getApuesta()){
+                    console.log ("Usted necesita introducir un monto mayor o igual a la apuesta requerida: "+this.tragamonedaClasico.getApuesta())
+                } else {
+                    let opcion = RLS.question ("----- Va a jugar al Tragamonedas Clasico ----- Ingrese Y, para continuar: ").toUpperCase();
+                    let premio = false;
+                    while ((opcion  == "Y")&&(this.user.getMontoAcumulado()>=this.tragamonedaClasico.getApuesta())) {
+                        premio = this.tragamonedaClasico.jugar();
+                        if (premio) {
+                            console.log("HAS SIDO GANADOR DE UN POZO TOTAL DE: $", this.tragamonedaClasico.getPozo(),", FELICITACIONES!")
+                            this.filetxt.EscribirArchivo("./logTragamonedas.txt","CLASICO: Ganó")
+                            this.user.aumentarMontoAcumulado(this.tragamonedaClasico.getPozo())
+                            console.log ("Su monto total ahora es de: $ "+this.user.getMontoAcumulado())
+                            opcion = RLS.question ("deseas seguir apostando? Ingresa Y, para seguir jugando: ").toUpperCase();
+                            
+                        }
+                        else {                        
+                                this.filetxt.EscribirArchivo("./logTragamonedas.txt","CLASICO: Perdió")
+                                this.user.disminuirMontoAcumulado(this.tragamonedaClasico.getApuesta());
+                                console.log ("Su monto total ahora es de: $ "+ this.user.getMontoAcumulado())
+                                opcion = RLS.question ("No hay ganador :( , deseas seguir apostando? Ingresa Y, para seguir jugando: ").toUpperCase(); 
+                        }
                     }
                 }
                 break;
             }
             case 2: {
-                let opcion = RLS.question ("----- Va a jugar al Tragamonedas Con Bonus ----- Ingrese Y, para continuar: ").toUpperCase();
-                let premio = false;
-                while (opcion  == "Y") {
-                    premio = this.tragamonedaPlus.jugar();
-                    if (premio) {
-                        console.log("HAS SIDO GANADOR DE UN POZO TOTAL DE: $", this.tragamonedaPlus.getPozo(),", FELICITACIONES!")
-                        this.filetxt.EscribirArchivo("./logTragamonedas.txt","PLUS: Ganó")
-                        this.user.aumentarMontoAcumulado(this.tragamonedaPlus.getPozo())
-                        console.log ("Su monto total ahora es de: $ "+this.user.getMontoAcumulado())
-                        opcion = RLS.question ("deseas seguir apostando? Ingresa Y, para seguir jugando: ").toUpperCase();
-                    }
-                    else {
-                        this.filetxt.EscribirArchivo("./logTragamonedas.txt","PLUS: Perdió")
-                        this.user.disminuirMontoAcumulado(this.tragamonedaPlus.getApuesta());
-                        console.log ("Su monto total ahora es de: $ "+ this.user.getMontoAcumulado())
-                        opcion = RLS.question ("No hay ganador :( , deseas seguir apostando? Ingresa Y, para seguir jugando: ").toUpperCase();
-                        
+                if (this.user.getMontoAcumulado()<this.tragamonedaPlus.getApuesta()){
+                    console.log ("Usted necesita introducir un monto mayor o igual a la apuesta requerida: "+this.tragamonedaPlus.getApuesta())
+                } else {
+                    let opcion = RLS.question ("----- Va a jugar al Tragamonedas Con Bonus ----- Ingrese Y, para continuar: ").toUpperCase();
+                    let premio = false;
+                    while ((opcion  == "Y") &&(this.user.getMontoAcumulado()>=this.tragamonedaPlus.getApuesta())) {
+                        premio = this.tragamonedaPlus.jugar();
+                        if (premio) {
+                            console.log("HAS SIDO GANADOR DE UN POZO TOTAL DE: $", this.tragamonedaPlus.getPozo(),", FELICITACIONES!")
+                            this.filetxt.EscribirArchivo("./logTragamonedas.txt","PLUS: Ganó")
+                            this.user.aumentarMontoAcumulado(this.tragamonedaPlus.getPozo())
+                            console.log ("Su monto total ahora es de: $ "+this.user.getMontoAcumulado())
+                            opcion = RLS.question ("deseas seguir apostando? Ingresa Y, para seguir jugando: ").toUpperCase();
+                        }
+                        else {
+                            this.filetxt.EscribirArchivo("./logTragamonedas.txt","PLUS: Perdió")
+                            this.user.disminuirMontoAcumulado(this.tragamonedaPlus.getApuesta());
+                            console.log ("Su monto total ahora es de: $ "+ this.user.getMontoAcumulado())
+                            opcion = RLS.question ("No hay ganador :( , deseas seguir apostando? Ingresa Y, para seguir jugando: ").toUpperCase();
+                            
+                        }
                     }
                 }
                 break;            
