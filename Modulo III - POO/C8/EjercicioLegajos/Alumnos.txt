@@ -1,0 +1,4 @@
+Nicolas Mertens;16;24123415;nicolasfmertens@gmail.com
+Rocio Gonzales;15;13131323;asd123s@gmail.com
+Olivia Montez;17;63742651;asdca123@gmail.com
+Juancito Perez;18;44123415;aca131ad@gmail.com

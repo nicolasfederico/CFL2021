@@ -1,0 +1,23 @@
+{
+  "name": "TPCasino",
+  "version": "1.0.0",
+  "description": "Este trabajo práctico consiste en la creación de un Casino, en el cual debemos contar con 2 Tragamonedas (clase padre y herencia,) y 2 juegos a elección. En ese caso yo opté por hacer un juego de la Ruleta y uno de Turf. Los tragamonedas poseen su carga de configuración desde un .txt. Todos los juegos cuentan con logs de resultados que se dan en formato .txt también y los cuales se crean al momento de hacer la primera jugada en cada uno de ellos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -w",
+    "casino": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.4.7",
+    "project-name-generator": "^2.1.9",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/project-name-generator": "^2.1.1",
+    "@types/readline-sync": "^1.4.4"
+  }
+}
