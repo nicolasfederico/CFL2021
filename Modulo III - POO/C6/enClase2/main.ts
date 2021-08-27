@@ -2,6 +2,7 @@ import autoCiudad from "./autoCiudad";
 import autoDeportivo from "./autoDeportivo";
 import camioneta from "./camioneta";
 
+
 let vehiculo1: autoCiudad;
 vehiculo1 = new autoCiudad (5);
 
@@ -15,7 +16,6 @@ console.log (vehiculo1);
 vehiculo1.setAceleracion ();
 console.log (vehiculo1);
 
-
 console.log (vehiculo2);
 vehiculo2.setAceleracion();
 console.log (vehiculo2);
@@ -23,3 +23,5 @@ console.log (vehiculo2);
 console.log (vehiculo3);
 vehiculo3.setAceleracion();
 console.log (vehiculo3);
+
+vehiculo1.cargarPatente();

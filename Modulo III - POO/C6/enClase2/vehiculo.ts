@@ -1,3 +1,5 @@
+import * as RLS from "readline-sync";
+
 export default abstract class Vehiculo {
     protected velocidad: number;
     protected color: string;
@@ -22,8 +24,27 @@ export default abstract class Vehiculo {
     }
  
 
-    public setPatente (patente:string):void {
-        this.patente = patente;
+    private setPatente ():void {
+        let opcionPatente: number;
+        let ingresoPatente: string;
+
+        opcionPatente = RLS.questionInt("Ingrese el formato de patente \n 1 - Formato NUEVO \n 2 - Formato VIEJO  \n : ")
+        if (opcionPatente == 1) {
+            ingresoPatente = RLS.question("Ingrese patente: ")
+            if (ingresoPatente.length!==7) {
+                throw new Error ("La patente debe contener 7 caracteres ")
+            }
+            this.patente = ingresoPatente;
+        }
+        else if (opcionPatente == 2) {
+            ingresoPatente = RLS.question("Ingrese patente: ")
+            if (ingresoPatente.length!==6) {
+                throw new Error ("La patente debe contener 6 caracteres ")
+            }
+            this.patente = ingresoPatente;
+        }
+        
+        
     }
 
     public getAceleracion ():number {
@@ -42,4 +63,11 @@ export default abstract class Vehiculo {
         return this.patente
     }
 
+    public cargarPatente ():void {
+        try {
+           this.setPatente(); 
+        } catch (error) {
+            console.log (error.message);
+        }
+    }
 }

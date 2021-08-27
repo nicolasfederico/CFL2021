@@ -21,3 +21,4 @@ console.log(vehiculo2);
 console.log(vehiculo3);
 vehiculo3.setAceleracion();
 console.log(vehiculo3);
+vehiculo1.cargarPatente();
