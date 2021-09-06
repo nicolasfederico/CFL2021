@@ -1,5 +1,7 @@
+let compras = [];
+
 async function load() {
-    let compras = [];
+    
     let container = document.querySelector("#app");
     container.innerHTML = "<h1> Loading...</h1>";
     try {

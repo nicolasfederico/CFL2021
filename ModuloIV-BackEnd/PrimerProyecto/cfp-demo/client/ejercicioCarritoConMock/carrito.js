@@ -66,8 +66,9 @@ function borrarCampos () {
     document.querySelector("#precio").value = "";
 }
 
-let compras = [];
+
 async function load() {
+    
     let container = document.querySelector("#articulos");
     container.innerHTML = "<h1> Loading...</h1>";
     try {
@@ -75,10 +76,10 @@ async function load() {
         if (response.ok) {
             let t = await response.json();
             //let v = JSON.stringify(t);
-            compras = t.compras;
+            carrito = t.compras;
             container.innerHTML = ""; 
-            for (let i=0; i<compras.length; i++){
-                container.innerHTML += "<li> Producto: " + compras[i].producto +" > Precio: "+compras[i].precio +"</li>"; 
+            for (let i=0; i<carrito.length; i++){
+                container.innerHTML += "<li> Producto: " + carrito[i].producto +" > Precio: "+carrito[i].precio +"</li>"; 
             }
         }
         else
