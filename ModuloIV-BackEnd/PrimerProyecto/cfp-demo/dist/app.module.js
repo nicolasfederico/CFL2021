@@ -18,6 +18,8 @@ const productos_fijos_service_1 = require("./productos-fijos/productos-fijos.ser
 const productos_fijos_controller_1 = require("./productos-fijos/productos-fijos.controller");
 const clientes_service_1 = require("./clientes/clientes.service");
 const clientes_controller_1 = require("./clientes/clientes.controller");
+const productos_postman_service_1 = require("./productos-postman/productos-postman.service");
+const productos_postman_controller_1 = require("./productos-postman/productos-postman.controller");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -27,8 +29,8 @@ AppModule = __decorate([
                 rootPath: (0, path_1.join)(__dirname, '..', 'client'),
             }),
         ],
-        controllers: [app_controller_1.AppController, productos_controller_1.ProductosController, productos_fijos_controller_1.ProductosFijosController, clientes_controller_1.ClientesController],
-        providers: [app_service_1.AppService, productos_service_1.ProductosService, productos_fijos_service_1.ProductosFijosService, clientes_service_1.ClientesService],
+        controllers: [app_controller_1.AppController, productos_controller_1.ProductosController, productos_fijos_controller_1.ProductosFijosController, clientes_controller_1.ClientesController, productos_postman_controller_1.ProductosPostmanController],
+        providers: [app_service_1.AppService, productos_service_1.ProductosService, productos_fijos_service_1.ProductosFijosService, clientes_service_1.ClientesService, productos_postman_service_1.ProductosPostmanService],
     })
 ], AppModule);
 exports.AppModule = AppModule;

@@ -9,6 +9,8 @@ import { ProductosFijosService } from './productos-fijos/productos-fijos.service
 import { ProductosFijosController } from './productos-fijos/productos-fijos.controller';
 import { ClientesService } from './clientes/clientes.service';
 import { ClientesController } from './clientes/clientes.controller';
+import { ProductosPostmanService } from './productos-postman/productos-postman.service';
+import { ProductosPostmanController } from './productos-postman/productos-postman.controller';
 
 @Module({
   imports: [
@@ -17,7 +19,7 @@ import { ClientesController } from './clientes/clientes.controller';
       'client'),
       }),
   ],
-  controllers: [AppController, ProductosController, ProductosFijosController, ClientesController],
-  providers: [AppService, ProductosService, ProductosFijosService, ClientesService],
+  controllers: [AppController, ProductosController, ProductosFijosController, ClientesController, ProductosPostmanController],
+  providers: [AppService, ProductosService, ProductosFijosService, ClientesService, ProductosPostmanService],
 })
 export class AppModule {}
