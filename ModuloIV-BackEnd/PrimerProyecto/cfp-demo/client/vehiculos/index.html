@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Concesionaria</title>
+</head>
+<body>
+    
+    <h1>Vehículos</h1>
+    <div id="listaVehiculos">
+        <ul id="vehiculos">
+        </ul>
+    </div>
+
+    <input type="text" id="marca"><span class="negrita">Marca</span></input>
+    <input type="text" id="patente"><span class="negrita">Patente</span></input>
+    <input type="text" id="modelo"><span class="negrita">Modelo</span></input>
+    <input type="text" id="año"><span class="negrita">Año</span></input>
+    <input type="text" id="precio"><span class="negrita">Precio</span></input>
+
+    
+    <button id="btnAdd">AGREGAR</button>
+    <button id="btnBorrar">BORRAR TODO</button>
+
+    <h2>Vehículo a buscar:</h1>
+        <label class="info-label">Patente a buscar: </label>
+        <input type="text" id="patenteSearch"><span class="negrita"></span>
+        <button id="btnSearch">BUSCAR</button>
+        <div id="contenedorSearch">
+            <ul>
+
+            </ul>
+        </div>
+    
+    <script src="concesionaria.js"></script>
+</body>
+</html>

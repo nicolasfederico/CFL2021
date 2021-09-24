@@ -20,6 +20,8 @@ const clientes_service_1 = require("./clientes/clientes.service");
 const clientes_controller_1 = require("./clientes/clientes.controller");
 const productos_postman_service_1 = require("./productos-postman/productos-postman.service");
 const productos_postman_controller_1 = require("./productos-postman/productos-postman.controller");
+const vehiculos_controller_1 = require("./vehiculos/vehiculos.controller");
+const vehiculos_service_1 = require("./vehiculos/vehiculos.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -29,8 +31,8 @@ AppModule = __decorate([
                 rootPath: (0, path_1.join)(__dirname, '..', 'client'),
             }),
         ],
-        controllers: [app_controller_1.AppController, productos_controller_1.ProductosController, productos_fijos_controller_1.ProductosFijosController, clientes_controller_1.ClientesController, productos_postman_controller_1.ProductosPostmanController],
-        providers: [app_service_1.AppService, productos_service_1.ProductosService, productos_fijos_service_1.ProductosFijosService, clientes_service_1.ClientesService, productos_postman_service_1.ProductosPostmanService],
+        controllers: [app_controller_1.AppController, productos_controller_1.ProductosController, productos_fijos_controller_1.ProductosFijosController, clientes_controller_1.ClientesController, productos_postman_controller_1.ProductosPostmanController, vehiculos_controller_1.VehiculosController],
+        providers: [app_service_1.AppService, productos_service_1.ProductosService, productos_fijos_service_1.ProductosFijosService, clientes_service_1.ClientesService, productos_postman_service_1.ProductosPostmanService, vehiculos_service_1.VehiculosService],
     })
 ], AppModule);
 exports.AppModule = AppModule;
