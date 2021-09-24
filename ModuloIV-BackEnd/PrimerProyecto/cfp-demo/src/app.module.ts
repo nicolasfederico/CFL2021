@@ -11,6 +11,8 @@ import { ClientesService } from './clientes/clientes.service';
 import { ClientesController } from './clientes/clientes.controller';
 import { ProductosPostmanService } from './productos-postman/productos-postman.service';
 import { ProductosPostmanController } from './productos-postman/productos-postman.controller';
+import { VehiculosController } from './vehiculos/vehiculos.controller';
+import { VehiculosService } from './vehiculos/vehiculos.service';
 
 @Module({
   imports: [
@@ -19,7 +21,7 @@ import { ProductosPostmanController } from './productos-postman/productos-postma
       'client'),
       }),
   ],
-  controllers: [AppController, ProductosController, ProductosFijosController, ClientesController, ProductosPostmanController],
-  providers: [AppService, ProductosService, ProductosFijosService, ClientesService, ProductosPostmanService],
+  controllers: [AppController, ProductosController, ProductosFijosController, ClientesController, ProductosPostmanController, VehiculosController],
+  providers: [AppService, ProductosService, ProductosFijosService, ClientesService, ProductosPostmanService, VehiculosService],
 })
 export class AppModule {}
