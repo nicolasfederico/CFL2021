@@ -1,12 +1,12 @@
 "use strict";
 
-let params = [];
+/* let params = []; */
 let datos = [];
 let datosComments = [];
 loadPosts();
 loadComments();
 
-function processParams() {
+/* function processParams() {
     let paramString = windows.location.search.substr(1);
     let paramArray = paramString.split("&");
     for (let i = 0; i< paramArray.length; i++) {
@@ -14,7 +14,7 @@ function processParams() {
         params[auxArray[0]] = auxArray[1];
     }
 }
-
+ */
 let listaDelGet = document.querySelector("#listaDelGet")
 let contenedorComentarios = document.querySelector('#contenedorComentarios')
 
