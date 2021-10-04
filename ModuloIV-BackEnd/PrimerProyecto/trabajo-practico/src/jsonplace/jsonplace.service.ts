@@ -29,6 +29,15 @@ export class JsonplaceService {
         return null;
     }
 
+    public getComment(id:number) {
+        for (let comment of this.comments) {
+            if (comment.getID()==id){
+                return comment
+            }
+        }
+        return null;
+    }
+
     public getCommentsOfPost(id:number):Comment []{
         let commentsArray: Comment[] = []
         for (let comment of this.comments) {
@@ -55,7 +64,7 @@ export class JsonplaceService {
     public delPost(id:number) {
         let posicionPost = this.posts.findIndex (post => post.getId() == id);
         this.posts.splice(posicionPost,1);
-        for (let i=this.comments.length-1; i>0;i--){
+        for (let i=this.comments.length-1; i>=0;i--){
             if (this.comments[i].getPostId () == id) {
                 this.comments.splice(i,1);
             }
@@ -77,7 +86,7 @@ export class JsonplaceService {
         if (posicionPost > -1) {
             const postUpdate = new Post(post.userId, post.id, post.title, post.body);
             this.posts[posicionPost] = postUpdate;
-            for (let i=this.comments.length-1; i>0;i--){
+            for (let i=this.comments.length-1; i>=0;i--){
                 if (this.comments[i].getPostId () == id) {
                     this.comments[i].setPostId(this.posts[posicionPost].getId());
                 }

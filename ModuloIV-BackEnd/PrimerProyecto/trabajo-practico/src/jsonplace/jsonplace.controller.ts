@@ -24,6 +24,12 @@ export class JsonplaceController {
         return this.jsonplaceService.getComments();
     }
 
+
+    @Get('comments/:id')
+    public getComment(@Param('id')id: string):Comment {
+        return this.jsonplaceService.getComment(parseInt(id));
+    }
+
     @Get('posts/:id/comments')
     public getCommentsOfPost(@Param('id')id: string): Comment[]{
         return this.jsonplaceService.getCommentsOfPost(parseInt(id));
