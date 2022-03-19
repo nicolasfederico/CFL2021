@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trabajo Practico</title>
+</head>
+<body>
+    <!-- seccion Post -->
+    <div>
+        <h2>----------- Post -----------</h2>
+        <p>User ID <input type="text" id="userId"></p>
+        <p>Post ID <input type="text" id="postId"></p>
+        <p>Título: <input type="text" id="tituloPost"></p>
+        <label for="cuerpoPost">Cuerpo:</label>
+        <textarea id="cuerpoPost" name="cuerpoPost" rows="5" cols="50">Sin texto.</textarea>
+        <div></div>
+        <button id="btnAddPost">Agregar</button>
+        <button id="btnSearchPost">Buscar</button>
+        <button id="btnDeletePost">Borrar</button>
+        <button id="btnModifyPost">Modificar</button>
+        <button id="btnDetallesPost">Ver comentarios</button>
+        <div id="aviso"></div>
+        <div id="contenedorComentarios"></div>
+    </div>
+    <!-- seccion comentarios -->
+    <div>
+        <h2>----------- Comentarios -----------</h2>
+        <p>ID Post <input type="text" id="idPost"></p>
+        <p>ID<input type="text" id="commentId"></p>
+        <p>Nombre <input type="text" id="nombreComment"></p>
+        <p>E-Mail<input type="text" id="emailComment"></p>
+        <label for="cuerpoComment">Cuerpo:</label>
+        <textarea id="cuerpoComment" name="cuerpoComment" rows="5" cols="50">Sin texto.</textarea>
+        <div></div>
+        <button id="btnAddComment">Agregar</button>
+        <button id="btnSearchComment">Buscar</button>
+        <button id="btnDeleteComment">Borrar</button>
+        <button id="btnModifyComment">Modificar</button>
+        <div id="avisoComment"></div>
+    </div>
+
+    <h3>-----------------</h1>
+        <button id="btnGetAllPosts">Get All POSTS</button>
+        <button id="btnGetAllComments">Get All COMMENTS</button>
+    <div class="lista">
+        <ul id="listaDelGet">
+        </ul>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+    text-align: center;
+    background-color: rgb(245, 212, 67);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sumaTotalBox {
+    margin-top: 2em;
+}
+
+h2 {
+    color:rgb(155, 155, 155);
+    border-radius: 5px;
+    border: 0.5em solid;
+    margin: 1em;    
+}
+
+
+
+.maximo {
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#btnAdd {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 150, 187);
+}
+
+#btnSumar {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 216, 11);
+}
+
+#btnBorrar {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(187, 0, 0);
+}
+
+#item {
+    margin: 1em;
+}
+
+#precio {
+    margin: 1em;
+    margin-left: 5em;
+}
+
+.negrita {
+    font-weight: bolder;
+}
+

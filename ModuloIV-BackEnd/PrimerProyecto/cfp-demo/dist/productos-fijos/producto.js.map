@@ -1,0 +1,1 @@
+{"version":3,"file":"producto.js","sourceRoot":"","sources":["../../src/productos-fijos/producto.ts"],"names":[],"mappings":";;AAAA,MAAqB,QAAQ;IAIzB,YAAoB,MAAa,EAAE,MAAa;QAC5C,MAAM,GAAG,MAAM,CAAC;QAChB,MAAM,GAAG,MAAM,CAAC;IACpB,CAAC;IAEM,SAAS;QACZ,OAAO,IAAI,CAAC,MAAM,CAAC;IACvB,CAAC;IAEM,SAAS;QACZ,OAAO,IAAI,CAAC,MAAM,CAAA;IACtB,CAAC;CACJ;AAhBD,2BAgBC"}

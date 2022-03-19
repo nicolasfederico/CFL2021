@@ -1,0 +1,24 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var autoCiudad_1 = __importDefault(require("./autoCiudad"));
+var autoDeportivo_1 = __importDefault(require("./autoDeportivo"));
+var camioneta_1 = __importDefault(require("./camioneta"));
+var vehiculo1;
+vehiculo1 = new autoCiudad_1.default(5);
+var vehiculo2;
+vehiculo2 = new autoDeportivo_1.default();
+var vehiculo3;
+vehiculo3 = new camioneta_1.default(1800);
+console.log(vehiculo1);
+vehiculo1.setAceleracion();
+console.log(vehiculo1);
+console.log(vehiculo2);
+vehiculo2.setAceleracion();
+console.log(vehiculo2);
+console.log(vehiculo3);
+vehiculo3.setAceleracion();
+console.log(vehiculo3);
+vehiculo1.cargarPatente();
